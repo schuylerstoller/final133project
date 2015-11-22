@@ -62,7 +62,7 @@ ReadGoogleSheet <- function(url, na.string="", header=TRUE){
 CleanTable1<-ReadGoogleSheet(Google_Doc)
 Cleaned_Data_Frame <- CleanGoogleTable(CleanTable1, table=1)
 
-x<-unique(Cleaned_Data_Frame$Observation)
+no_repeats <- Cleaned_Data_Frame[!duplicated(Cleaned_Data_Frame), ]
   
 
 
